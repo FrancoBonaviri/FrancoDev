@@ -30,45 +30,93 @@
           <h2>Algunos de mis trabajos</h2>
           <div class="row">
             <article class="col-6 col-12-xsmall work-item">
-              <a href="../../../assets/images/fulls/01.jpg" class="image fit thumb"><img src="../../../assets/images/thumbs/01.jpg" alt="" /></a>
+              <a href="../../../assets/images/fulls/01.png" class="image fit thumb"><img src="../../../assets/images/thumbs/01.png" alt="" /></a>
               <h3>Magna sed consequat tempus</h3>
               <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-              <a href="../../../assets/images/fulls/02.jpg" class="image fit thumb"><img src="../../../assets/images/thumbs/02.jpg" alt="" /></a>
+              <a href="../../../assets/images/fulls/02.png" class="image fit thumb"><img src="../../../assets/images/thumbs/02.png" alt="" /></a>
               <h3>Ultricies lacinia interdum</h3>
               <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-              <a href="../../../assets/images/fulls/03.jpg" class="image fit thumb"><img src="../../../assets/images/thumbs/03.jpg" alt="" /></a>
+              <a href="../../../assets/images/fulls/03.png" class="image fit thumb"><img src="../../../assets/images/thumbs/03.png" alt="" /></a>
               <h3>Tortor metus commodo</h3>
               <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-              <a href="../../../assets/images/fulls/04.jpg" class="image fit thumb"><img src="../../../assets/images/thumbs/04.jpg" alt="" /></a>
+              <a href="../../../assets/images/fulls/04.png" class="image fit thumb"><img src="../../../assets/images/thumbs/04.png" alt="" /></a>
               <h3>Quam neque phasellus</h3>
               <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-              <a href="../../../assets/images/fulls/05.jpg" class="image fit thumb"><img src="../../../assets/images/thumbs/05.jpg" alt="" /></a>
+              <a href="../../../assets/images/fulls/05.png" class="image fit thumb"><img src="../../../assets/images/thumbs/05.png" alt="" /></a>
               <h3>Nunc enim commodo aliquet</h3>
               <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
-              <a href="../../../assets/images/fulls/06.jpg" class="image fit thumb"><img src="../../../assets/images/thumbs/06.jpg" alt="" /></a>
+              <a href="../../../assets/images/fulls/06.png" class="image fit thumb"><img src="../../../assets/images/thumbs/06.png" alt="" /></a>
               <h3>Risus ornare lacinia</h3>
               <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
             </article>
           </div>
-          <ul class="actions">
-            <li><a href="#" class="button">Full Portfolio</a></li>
+          <ul class="actions" *ngIf="!showMore">
+            <li><a class="button" (click)="showMore = true">Ver mas</a></li>
           </ul>
+
+
+
+          <div class="table-responsive" *ngIf="showMore">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>Web de turnos y Pagos en linea</td>
+                        <td><a href="https://corrientes.sigein.net/">https://corrientes.sigein.net/</a></td>
+                    </tr>
+                    <tr>
+                      <td>Sistema de Juzgamiento utilizado por jueces</td>
+                      <td><a href="https://juzgados2.sigein.net/">https://juzgados2.sigein.net/</a></td>
+                    </tr>
+                    <tr>
+                      <td>Sistema de procesamiento de actas de tránsito</td>
+                      <td><a href="http://boj2.sigein.net/">http://boj2.sigein.net/</a></td>
+                    </tr>
+                    <tr>
+                      <td>Administrador de turnos</td>
+                      <td><a href="https://dotech.com.ar/productos/administrador-turnos/index.html">https://dotech.com.ar/productos/administrador-turnos/index.html</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
         </section>
+
+        <section id="three">
+          <h2>Certificaciones</h2>
+          <div class="row">
+            <article class="col-6 col-12-xsmall work-item">
+              <ul>
+                <li>
+                  <h3>Diplomatura en programacion .NET</h3>
+                  <a target="_blank" href="../../../assets/cert_aprob_21816_718_2_2020-09-14-08-41-31.pdf">Ver diploma</a>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+
+
+
+
+
 
       <!-- Three -->
         <section id="three">
           <h2>Contacto</h2>
-          <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+          <p>Si quieres realizar un trabajo conmigo, contratarme, o simplemente conocerme, completa este formulario y me pondre en contacto contigo</p>
           <div class="row">
             <div class="col-8 col-12-small">
               <form method="post" action="#">
@@ -105,8 +153,8 @@
 
     </div>
 
-  <!-- Footer -->
-    <footer id="footer" >
+    <!-- Footer -->
+    <footer id="footer">
       <div class="inner" >
         <ul class="icons" >
           <li><a href="https://www.linkedin.com/in/franco-bonaviri-7554511ba/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
@@ -117,7 +165,7 @@
       </div>
     </footer>
 
-  <!-- Scripts -->
+    <!-- Scripts -->
     <script src="../../../assets/js/jquery.min.js"></script>
     <script src="../../../assets/js/jquery.poptrox.min.js"></script>
     <script src="../../../assets/js/browser.min.js"></script>
