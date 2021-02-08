@@ -17,9 +17,15 @@
       <!-- One -->
         <section id="one">
           <header class="major">
-            <h2>Algo sobre mi</h2>
+            <h2>Algo sobre mí</h2>
           </header>
-          <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
+          <p>Soy flexible, confiable y poseo excelentes habilidades para controlar el tiempo.
+             Soy una persona entusiasta, automotivada, responsable, un poco freaky y trabajadora.
+             Tengo experiencia manejando frameworks frontend como ReactJs y Angular, y también creando servidores backend con NodeJs y .NET. <br>
+             Tengo una capacidad de liderazgo nata la cual siempre me lleva a intentar tomar las riendas de los proyectos a realizar y, en la medida de lo posible,  ser el responsable del mismo.
+
+              Sé que soy joven pero tengo bien claro mi futuro, y que siempre debo dar lo mejor de mi para aprender y ser mejor. <br>
+            </p>
           <ul class="actions">
             <li><a href="../../../assets/FrancoBonaviri.pdf" target="_blank" class="button">Descargar CV</a></li>
           </ul>
@@ -31,33 +37,33 @@
           <div class="row">
             <article class="col-6 col-12-xsmall work-item">
               <a href="../../../assets/images/fulls/01.png" class="image fit thumb"><img src="../../../assets/images/thumbs/01.png" alt="" /></a>
-              <h3>Magna sed consequat tempus</h3>
-              <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+              <h3>Lector de códigos QR</h3>
+              <p>Una simple aplicación lectora de códigos qr. Cuenta con un mapa y la posibilidad de guardar un backup de tus escaneos</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
               <a href="../../../assets/images/fulls/02.png" class="image fit thumb"><img src="../../../assets/images/thumbs/02.png" alt="" /></a>
-              <h3>Ultricies lacinia interdum</h3>
-              <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+              <h3>Aplicación de películas</h3>
+              <p>Una pequeña cartelera virtual en la que puedes ver el detalle de todas las películas que imagines</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
               <a href="../../../assets/images/fulls/03.png" class="image fit thumb"><img src="../../../assets/images/thumbs/03.png" alt="" /></a>
-              <h3>Tortor metus commodo</h3>
-              <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+              <h3>Aplicación de noticias</h3>
+              <p>Un gran variedad de noticias en un mismo lugar. También puedes compartirla con redes sociales y destacarlas para leerlas luego</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
               <a href="../../../assets/images/fulls/04.png" class="image fit thumb"><img src="../../../assets/images/thumbs/04.png" alt="" /></a>
-              <h3>Quam neque phasellus</h3>
-              <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+              <h3>Web de notas</h3>
+              <p>Una pequeña aplicación web en la que puedes dar de alta usuarios y crear notas con la firma de los mismos</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
               <a href="../../../assets/images/fulls/05.png" class="image fit thumb"><img src="../../../assets/images/thumbs/05.png" alt="" /></a>
-              <h3>Nunc enim commodo aliquet</h3>
-              <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+              <h3>ATLAS</h3>
+              <p>Un pequeño proyecto freaky inspirado en google drive. En el podrás ver tus archivos, agregar carpetas, eliminarlas, etc.</p>
             </article>
             <article class="col-6 col-12-xsmall work-item">
               <a href="../../../assets/images/fulls/06.png" class="image fit thumb"><img src="../../../assets/images/thumbs/06.png" alt="" /></a>
-              <h3>Risus ornare lacinia</h3>
-              <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+              <h3>Journal app</h3>
+              <p>Un diario web en el que puedes guardar todas tus ideas y notas. Cuanta con autenticación simple y mediante google</p>
             </article>
           </div>
           <ul class="actions" *ngIf="!showMore">
@@ -121,13 +127,13 @@
             <div class="col-8 col-12-small">
               <form method="post" action="#">
                 <div class="row gtr-uniform gtr-50">
-                  <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                  <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                  <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                  <div class="col-6 col-12-xsmall"><input [(ngModel)]="name" type="text" name="name" id="name" placeholder="Name" /></div>
+                  <div class="col-6 col-12-xsmall"><input [(ngModel)]="email" type="email" name="email" id="email" placeholder="Email" /></div>
+                  <div class="col-12"><textarea [(ngModel)]="message" name="message" id="message" placeholder="Message" rows="4"></textarea></div>
                 </div>
               </form>
               <ul class="actions">
-                <li><input type="submit" value="Enviar" /></li>
+                <li><input type="submit" value="Enviar" (click)="handleClick()"/></li>
               </ul>
             </div>
             <div class="col-4 col-12-small">
@@ -151,7 +157,9 @@
           </div>
         </section>
 
-    </div>
+
+
+      </div>
 
     <!-- Footer -->
     <footer id="footer">
@@ -164,6 +172,15 @@
         </ul>
       </div>
     </footer>
+
+
+
+
+
+
+
+
+
 
     <!-- Scripts -->
     <script src="../../../assets/js/jquery.min.js"></script>
