@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,10 @@ export class HomeComponent implements OnInit {
 
   //#endregion
 
-  constructor(private toast: ToastrService) { }
+  constructor(
+    private toast: ToastrService,
+    private api: ApiService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -28,9 +32,13 @@ export class HomeComponent implements OnInit {
 
 
   handleClick() {
-    setTimeout(() => {
-      this.toast.success("El mensaje fue enviado correctamente ")
-    }, 100);
+
+    this.api.SendEmail(this.message, this.name, this.email).subscribe( res => {
+      if( res.OK )
+        this.toast.success("El mensaje fue enviado correctamente ");
+      else
+        this.toast.error(res.msg);
+    });
   }
 
 }

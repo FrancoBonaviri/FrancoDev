@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AbautComponent } from './pages/abaut/abaut.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
 	  ToastrModule.forRoot(),
     FormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
