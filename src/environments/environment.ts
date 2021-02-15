@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  URL_API: 'https://localhost:3002/'
+  URL_API: 'https://francodev-server.herokuapp.com/'
 };
 
 /*
