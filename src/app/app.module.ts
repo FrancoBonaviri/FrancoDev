@@ -11,6 +11,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AbautComponent } from './pages/abaut/abaut.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     ContactComponent,
     AbautComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
 	  ToastrModule.forRoot(),
     FormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
